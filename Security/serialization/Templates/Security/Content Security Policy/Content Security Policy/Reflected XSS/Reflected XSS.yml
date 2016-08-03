@@ -1,0 +1,21 @@
+﻿---
+ID: "5d2b4caa-abfd-4a84-9d07-c529c39b290e"
+Parent: "3fe62572-11e6-499d-ae05-85931f65ef18"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/User Defined/Security/Content Security Policy/Content Security Policy/Reflected XSS/Reflected XSS
+DB: master
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:/sitecore/system/Modules/Security/Content Security Policy Options/Reflected XSS/*"
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Checklist
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160624T205332Z

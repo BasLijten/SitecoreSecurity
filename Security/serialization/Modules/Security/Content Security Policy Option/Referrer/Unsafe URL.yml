@@ -1,0 +1,17 @@
+﻿---
+ID: "0a8cd403-ebe2-422e-8640-705337ba46a6"
+Parent: "e0052904-942d-4aac-a4e0-57937fcbdff3"
+Template: "d1ac8564-1770-4057-b871-6bcc03ec0960"
+Path: /sitecore/system/Modules/Security/Content Security Policy Options/Referrer/Unsafe URL
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160624T204445Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: sitecore\admin

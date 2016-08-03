@@ -1,0 +1,26 @@
+﻿---
+ID: "c5681c85-1537-4361-ae0c-ea8de8842b09"
+Parent: "6905d22b-b203-4d00-afa0-900f3e768810"
+Template: "6905d22b-b203-4d00-afa0-900f3e768810"
+Path: /sitecore/templates/User Defined/Security/Content Security Policy/Content Security Policy/__Standard Values
+DB: master
+SharedFields:
+- ID: "87203f43-9573-4dcf-bc28-86bf33209165"
+  Hint: Default Source
+  Type: Checklist
+  Value: "{22E58B04-877D-4269-9678-FCD889D94D4C}"
+- ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
+  Hint: __Enable item fallback
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160623T200553Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: sitecore\admin

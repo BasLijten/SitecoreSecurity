@@ -1,0 +1,18 @@
+﻿---
+ID: "a309881f-a971-4e07-8576-937ac7157521"
+Parent: "59449712-e218-4e94-889e-10048f04144f"
+Template: "d1ac8564-1770-4057-b871-6bcc03ec0960"
+Path: /sitecore/system/Modules/Security/Content Security Policy Options/Object Source/None
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-100"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160618T191937Z

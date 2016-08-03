@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5E223A7-FA45-4905-B48D-160BA2217AEF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Security.Web</RootNamespace>
+    <AssemblyName>Security.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="App_Config\Include\Security\Security.AddCspHeader.config" />
+    <Content Include="App_Config\Include\Security\Unicorn.Configs.Default.config" />
+    <None Include="Properties\PublishProfiles\sc81rev160519.pubxml" />
+    <Content Include="serialization\Modules\Security.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policies.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policies\Default.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Child Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Child Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Child Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Child Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Connect Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Connect Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Connect Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Connect Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Default Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Default Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Default Source\Data.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Default Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Default Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Default Source\Unsafe Eval.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Default Source\Unsafe Inline.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Font Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Font Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Font Source\Data.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Font Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Font Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Form Action.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Form Action\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Form Action\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Form Action\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Frame Ancestors.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Frame Ancestors\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Frame Ancestors\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Frame Ancestors\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Image Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Image Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Image Source\Data.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Image Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Image Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Manifest Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Manifest Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Manifest Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Manifest Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Media Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Media Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Media Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Media Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Object Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Object Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Object Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Object Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Referrer.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Referrer\No Referrer When Downgrade.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Referrer\No Referrer.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Referrer\Origin When Cross Origin.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Referrer\Origin.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Referrer\Unsafe URL.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Reflected XSS.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Reflected XSS\Allow.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Reflected XSS\Block.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Reflected XSS\Filter.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Sandbox.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Sandbox\Allow Forms.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Sandbox\Allow Pointer Lock.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Sandbox\Allow Popups.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Sandbox\Allow Same Origin.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Sandbox\Allow Scripts.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Sandbox\Allow Top Navigation.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Sandbox\Enable.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Script Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Script Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Script Source\Data.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Script Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Script Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Script Source\Unsafe Eval.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Script Source\Unsafe Inline.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Style Source.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Style Source\All.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Style Source\Data.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Style Source\None.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Style Source\Self.yml" />
+    <Content Include="serialization\Modules\Security\Content Security Policy Option\Style Source\Unsafe Inline.yml" />
+    <Content Include="serialization\Templates\Security.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy Link.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy Link\Content Security Policy.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy Link\Content Security Policy\CSP-Report.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy Link\Content Security Policy\CSP.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy Option.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Child Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Child Source\Child hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Child Source\Child Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Connect Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Connect Source\Connect Hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Connect Source\Connect Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Default Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Default Source\default hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Default Source\Default Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Font Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Font Source\Font Hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Font Source\Font Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Form Action.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Form Action\Form Action Hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Form Action\Form Action.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Frame Ancestors.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Frame Ancestors\Frame Ancestors Hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Frame Ancestors\Frame Ancestors.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Image Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Image Source\image hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Image Source\Image Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Manifest Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Manifest Source\Manifest Hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Manifest Source\Manifest Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Media Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Media Source\Media Hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Media Source\Media Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Misc parameters.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Misc parameters\Base Uri.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Misc parameters\Block All Mixed Content.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Misc parameters\Plugin Types.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Misc parameters\Report Only.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Misc parameters\Report URI.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Misc parameters\Upgrade Insecure Requests.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Object Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Object Source\Object Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Object Source\Objects hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Referrer.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Referrer\Referrer.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Reflected XSS.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Reflected XSS\Reflected XSS.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Sandbox.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Sandbox\Sandbox.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Script Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Script Source\script hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Script Source\Script Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Style Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Style Source\style hosts.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\Style Source\Style Source.yml" />
+    <Content Include="serialization\Templates\Security\Content Security Policy\Content Security Policy\__Standard Values.yml" />
+    <Content Include="serialization\Templates\Security\XFrameOptions.yml" />
+    <Content Include="serialization\Templates\Security\XFrameOptions\XFrameOptions.yml" />
+    <Content Include="serialization\Templates\Security\XFrameOptions\XFrameOptions\XFrameOption.yml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Security.Web.wpp.targets">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Security\Security.DisableMvcHeader.config" />
+    <None Include="Properties\PublishProfiles\package.pubxml" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Security.Business\Security.Business.csproj">
+      <Project>{30cdbe38-78ff-4d31-bee4-b72df0e90320}</Project>
+      <Name>Security.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21314</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:21314/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

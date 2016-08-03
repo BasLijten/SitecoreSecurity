@@ -1,0 +1,21 @@
+﻿---
+ID: "a44afb93-35fc-4599-9a9c-901f788fba00"
+Parent: "7acb5f2d-fa58-4034-85b0-b7795215be47"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/User Defined/Security/Content Security Policy/Content Security Policy/Referrer/Referrer
+DB: master
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:/sitecore/system/Modules/Security/Content Security Policy Options/Referrer/*"
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Checklist
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160624T205332Z

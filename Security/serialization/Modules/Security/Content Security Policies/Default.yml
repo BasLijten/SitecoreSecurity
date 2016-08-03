@@ -1,0 +1,101 @@
+﻿---
+ID: "c50839ef-26a1-4913-88e4-afb98fb77ef9"
+Parent: "6f83cdbd-8949-4d29-871b-09ef974c500d"
+Template: "6905d22b-b203-4d00-afa0-900f3e768810"
+Path: /sitecore/system/Modules/Security/Content Security Policies/Default
+DB: master
+SharedFields:
+- ID: "175dee0c-33b3-4de9-be79-1666f68a3996"
+  Hint: Font Source
+  Type: Checklist
+  Value: "{258DD856-0A54-4747-9FDA-86D79AB88BF4}"
+- ID: "22685c35-98a4-4286-8a74-377adda0422d"
+  Hint: Base Uri
+  Value: insurco
+- ID: "262a0a36-0927-4390-bfee-32e7a9826725"
+  Hint: Font Hosts
+  Value: fonts.googleapis.com fonts.gstatic.com
+- ID: "32d9efcd-cbda-40c3-8aa5-a12d5aa4f25a"
+  Hint: Connect Source
+  Type: Checklist
+  Value: "{F5C90057-21BC-4443-B672-5D77961E0AE1}"
+- ID: "357d50f4-cf77-49d0-8911-e57278e94093"
+  Hint: Media Source
+  Type: Checklist
+  Value: "{5B743ABA-8BE6-4CC4-95C6-5AD4000C5833}"
+- ID: "48dcdfc6-f830-48c2-bca2-c7ec86fa7d4f"
+  Hint: Style Source
+  Type: Checklist
+  Value: |
+    {5CD8E159-72A6-47BE-BA33-71E224FFF6A1}
+    {55F35BE0-9069-4EFB-A5FD-EFFDC9929AA2}
+- ID: "4de3b30c-d48e-43cd-a433-8663891a0387"
+  Hint: Report URI
+  Value: "https://insurco.report-uri.io/r/default/csp/enforce"
+- ID: "87203f43-9573-4dcf-bc28-86bf33209165"
+  Hint: Default Source
+  Type: Checklist
+  Value: "{22E58B04-877D-4269-9678-FCD889D94D4C}"
+- ID: "8ff4b18d-a604-4b27-a7ad-65533198ecb3"
+  Hint: Form Action
+  Type: Checklist
+  Value: "{2822BF7B-94B6-4B71-90DF-987618C0F1BC}"
+- ID: "a605faf8-371a-426c-a83d-28afcc260316"
+  Hint: Frame Ancestors
+  Type: Checklist
+  Value: "{8B8DA960-13AD-4386-A44C-547CC6B1D450}"
+- ID: "b8669bed-5889-42de-9dda-5ce6dc34772d"
+  Hint: Script Source
+  Type: Checklist
+  Value: |
+    {BA7F7CCA-C0CB-412E-B620-B2D935A64643}
+    {D526536E-5ACC-46CB-B4EB-5513F3917E57}
+- ID: "cb4b87e3-2997-4f55-a7fc-8830c5a0fc16"
+  Hint: style hosts
+  Value: fonts.googleapis.com fonts.gstatic.com
+- ID: "dbb08956-c4c6-4f8e-89e8-7864af4af820"
+  Hint: Image Source
+  Type: Checklist
+  Value: "{54DEA346-D16A-4B89-A0A5-3DAD32158B48}"
+- ID: "e2609c97-55e6-4853-ad98-16a06b156a9e"
+  Hint: Plugin Types
+  Value: flash
+- ID: "eecf6bd9-ece0-4af2-ba15-06b093258e43"
+  Hint: Child Source
+  Type: Checklist
+  Value: "{0C82F583-E8C0-4F73-8DAA-6E430BA46080}"
+- ID: "f1b2bc00-b68a-4444-859a-8d8772d3e589"
+  Hint: Object Source
+  Type: Checklist
+  Value: "{0C82F583-E8C0-4F73-8DAA-6E430BA46080}"
+- ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
+  Hint: __Enable item fallback
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "258aa831-7b5c-4d26-baa9-59fd6a5d5cd7"
+      Hint: Sandbox
+      Type: Checklist
+      Value: "{8441CB67-BC99-4CE1-869C-3D7C2210AA48}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160618T195404Z
+    - ID: "5d2b4caa-abfd-4a84-9d07-c529c39b290e"
+      Hint: Reflected XSS
+      Type: Checklist
+      Value: "{D5B86DFC-2E94-4549-BF6A-4B981F93E0AB}"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: sitecore\admin
+    - ID: "60323e0d-09ff-4b29-a20b-d02e040c1fe6"
+      Hint: Manifest Source
+      Type: Checklist
+      Value: "{B5DE836B-AB46-4D60-9E05-856592189926}"
+    - ID: "a44afb93-35fc-4599-9a9c-901f788fba00"
+      Hint: Referrer
+      Type: Checklist
+      Value: "{F278B3CF-6C66-4A41-BDE4-1984D2F212ED}"
