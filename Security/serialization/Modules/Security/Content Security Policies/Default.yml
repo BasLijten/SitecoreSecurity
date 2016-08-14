@@ -8,13 +8,13 @@ SharedFields:
 - ID: "175dee0c-33b3-4de9-be79-1666f68a3996"
   Hint: Font Source
   Type: Checklist
-  Value: "{258DD856-0A54-4747-9FDA-86D79AB88BF4}"
+  Value: "{BA7966BD-0A11-41E6-BDA1-AC0DECC30C77}"
 - ID: "22685c35-98a4-4286-8a74-377adda0422d"
   Hint: Base Uri
   Value: insurco
 - ID: "262a0a36-0927-4390-bfee-32e7a9826725"
   Hint: Font Hosts
-  Value: fonts.googleapis.com fonts.gstatic.com
+  Value: 
 - ID: "32d9efcd-cbda-40c3-8aa5-a12d5aa4f25a"
   Hint: Connect Source
   Type: Checklist
@@ -22,7 +22,7 @@ SharedFields:
 - ID: "357d50f4-cf77-49d0-8911-e57278e94093"
   Hint: Media Source
   Type: Checklist
-  Value: "{5B743ABA-8BE6-4CC4-95C6-5AD4000C5833}"
+  Value: "{2FE86FC6-0473-4C87-99A8-8370BAA58F7B}"
 - ID: "48dcdfc6-f830-48c2-bca2-c7ec86fa7d4f"
   Hint: Style Source
   Type: Checklist
@@ -49,10 +49,10 @@ SharedFields:
   Type: Checklist
   Value: |
     {BA7F7CCA-C0CB-412E-B620-B2D935A64643}
-    {D526536E-5ACC-46CB-B4EB-5513F3917E57}
+    {05A673E9-F1AB-4BD6-AE42-1476A984F856}
 - ID: "cb4b87e3-2997-4f55-a7fc-8830c5a0fc16"
   Hint: style hosts
-  Value: fonts.googleapis.com fonts.gstatic.com
+  Value: 
 - ID: "dbb08956-c4c6-4f8e-89e8-7864af4af820"
   Hint: Image Source
   Type: Checklist
@@ -63,11 +63,11 @@ SharedFields:
 - ID: "eecf6bd9-ece0-4af2-ba15-06b093258e43"
   Hint: Child Source
   Type: Checklist
-  Value: "{0C82F583-E8C0-4F73-8DAA-6E430BA46080}"
+  Value: "{A309881F-A971-4E07-8576-937AC7157521}"
 - ID: "f1b2bc00-b68a-4444-859a-8d8772d3e589"
   Hint: Object Source
   Type: Checklist
-  Value: "{0C82F583-E8C0-4F73-8DAA-6E430BA46080}"
+  Value: "{A309881F-A971-4E07-8576-937AC7157521}"
 - ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
   Hint: __Enable item fallback
   Type: Checkbox

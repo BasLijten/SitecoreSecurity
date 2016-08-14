@@ -8,12 +8,36 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.Business", "Security.Business\Security.Business.csproj", "{30CDBE38-78FF-4D31-BEE4-B72DF0E90320}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{C0DC5799-5E81-44B4-AECF-8FC3B72D6AA9}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{76DC8205-4CBE-46D2-8EB9-355D496A86A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.Business.Test", "Security.Business.Test\Security.Business.Test.csproj", "{D4B37CD0-C7D6-4C64-AF65-9570FC3BE99F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unicorn.Web", "Unicorn.Web\Unicorn.Web.csproj", "{996798F0-5CCD-4B8F-B310-94B95209D12D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XDT", "XDT", "{523A8979-2395-451D-9E02-A26DD7CD117B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LetsEncrypt", "LetsEncrypt", "{AEA40CD2-1C9B-486A-B31F-F09F3074292A}"
+	ProjectSection(SolutionItems) = preProject
+		LetsEncrypt\letsencrypt.exe = LetsEncrypt\letsencrypt.exe
+		LetsEncrypt\letsencrypt.exe.config = LetsEncrypt\letsencrypt.exe.config
+		LetsEncrypt\Web_Config.xml = LetsEncrypt\Web_Config.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{D73FFDB3-D49B-455C-A8FE-93E42531A571}"
+	ProjectSection(SolutionItems) = preProject
+		LetsEncrypt\x64\libeay32.dll = LetsEncrypt\x64\libeay32.dll
+		LetsEncrypt\x64\ssleay32.dll = LetsEncrypt\x64\ssleay32.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{77E9683D-4458-4F73-AC92-085EF1B50508}"
+	ProjectSection(SolutionItems) = preProject
+		LetsEncrypt\x86\libeay32.dll = LetsEncrypt\x86\libeay32.dll
+		LetsEncrypt\x86\ssleay32.dll = LetsEncrypt\x86\ssleay32.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,5 +67,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{76DC8205-4CBE-46D2-8EB9-355D496A86A2} = {C0DC5799-5E81-44B4-AECF-8FC3B72D6AA9}
+		{AEA40CD2-1C9B-486A-B31F-F09F3074292A} = {C0DC5799-5E81-44B4-AECF-8FC3B72D6AA9}
+		{D73FFDB3-D49B-455C-A8FE-93E42531A571} = {AEA40CD2-1C9B-486A-B31F-F09F3074292A}
+		{77E9683D-4458-4F73-AC92-085EF1B50508} = {AEA40CD2-1C9B-486A-B31F-F09F3074292A}
 	EndGlobalSection
 EndGlobal
