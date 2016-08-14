@@ -101,7 +101,7 @@
     <Content Include="packages.config" />
     <Content Include="App_Config\Include\Security\Security.AddCspHeader.config" />
     <Content Include="App_Config\Include\Security\Unicorn.Configs.Default.config" />
-    <Content Include="App_Config\Include\Security\Security.LetsEncrypt.config" />
+    <Content Include=".well-known\acme-challenge\Web.config" />
     <None Include="Properties\PublishProfiles\sc81rev160519.pubxml" />
     <Content Include="serialization\Modules\Security.yml" />
     <Content Include="serialization\Modules\Security\Content Security Policies.yml" />
