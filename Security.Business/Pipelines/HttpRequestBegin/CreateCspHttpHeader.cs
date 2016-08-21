@@ -25,6 +25,7 @@ namespace Security.Business.Pipelines.HttpRequestBegin
         private const string ContentSecurityPolicyHeaderReportOnly = "Content-Security-Policy-Report-Only";
         private const string XContentSecurityPolicyHeaderReportOnly = "X-Content-Security-Policy-Report-Only";
         private const string XFrameOptionsHeader = "X-Frame-Options";
+        private const string XXssProtection = "X-XSS-Protection";
         public override void Process(HttpRequestArgs args)
         {
             Assert.ArgumentNotNull(args, "args");
@@ -49,6 +50,7 @@ namespace Security.Business.Pipelines.HttpRequestBegin
                 CreateAppliedCSP(headerPolicy, args);
                 CreateReportCSP(reportPolicy, args);
                 CreateXFrameOptions(headerPolicy, args);
+                CreateXssProtection(headerPolicy.ReflectedXss, args);
             }
         }
 
@@ -91,8 +93,6 @@ namespace Security.Business.Pipelines.HttpRequestBegin
 
         private void CreateXFrameOptions(IContentSecurityPolicy policy, HttpRequestArgs args)
         {
-            string result = String.Empty;
-            string header = String.Empty;
             if (policy != null)
             {
                 if (policy.FrameAncestors != null)
@@ -120,6 +120,31 @@ namespace Security.Business.Pipelines.HttpRequestBegin
                 args.Context.Response.Headers.Add(XFrameOptionsHeader, "SameOrigin");
             else if (String.IsNullOrEmpty(source.Hostnames))
                 args.Context.Response.Headers.Add(XFrameOptionsHeader, $"Allow-FROM {source.Hostnames}");            
+        }
+
+        private void CreateXssProtection(IContentSecurityPolicyReflectedXss policy, HttpRequestArgs args)
+        {
+            string xssmode = String.Empty;
+            if(policy != null)
+            {
+                if(!String.IsNullOrEmpty(policy.Mode))
+                {
+                    switch(policy.Mode.ToLower())
+                    {
+                        case "allow":
+                            xssmode = "0";
+                            break;                        
+                        case "filter":
+                            xssmode = "1";
+                            break;
+                        case "block":                            
+                        default:
+                            xssmode = "1; mode=block";
+                            break;
+                    }
+                    args.Context.Response.Headers.Add(XXssProtection, xssmode);
+                }
+            }
         }
 
         private IContentSecurityPolicy CreatePolicy(Item currentItem, string fieldId)
@@ -152,7 +177,7 @@ namespace Security.Business.Pipelines.HttpRequestBegin
 
             //p.Referrer = GetReferrerOptions(i);
             //p.Sandbox = GetSandboxOptions(i);
-            //p.ReflectedXss = GetReflectedXssOptions(i);
+            p.ReflectedXss = GetReflectedXssOptions(i);
 
             p.BaseUri = GetBaseUri(i);
             p.BlockAllMixedContent = GetMixedContentSetting(i);
@@ -167,8 +192,33 @@ namespace Security.Business.Pipelines.HttpRequestBegin
         private IContentSecurityPolicyReflectedXss GetReflectedXssOptions(Item i)
         {
             string fieldName = CspFieldIds.ReflextedXssSourceFieldId;
-            throw new NotImplementedException();
+            IContentSecurityPolicyReflectedXss reflectedXss = new ReflectiveXssContentSecurityPolicySource();            
+            var optionsField = i.Fields[fieldName];
+            var listField = (MultilistField)optionsField;
+            var options = listField.GetItems();
+
+            foreach (var option in options)
+            {
+                switch (option.Name.ToLower())
+                {
+                    case "allow":
+                        reflectedXss.Mode = "allow";
+                        break;
+                    case "filter":
+                        reflectedXss.Mode = "filter";
+                        break;
+                    case "block":
+                        reflectedXss.Mode = "block";
+                        break;
+                    default:
+                        break;
+                }
+            }
+           
+
+            return reflectedXss;            
         }
+        
 
         private string GetPluginTypes(Item i)
         {

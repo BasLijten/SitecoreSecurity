@@ -8,8 +8,7 @@ namespace Security.Business.Models
 {
     public interface IContentSecurityPolicyReflectedXss
     {
-        bool Allow { get; set; }
-        bool Block { get; set; }
-        bool Filter { get; set; }
+        string Name { get; }
+        string Mode { get; set; }
     }
 }

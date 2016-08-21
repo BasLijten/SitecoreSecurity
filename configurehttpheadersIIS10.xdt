@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.web>
+    <httpRuntime xdt:Transform="SetAttributes(enableVersionHeader)" enableVersionHeader="false" >
+    </httpRuntime>
+  </system.web>
+  <system.webServer>
+    <rewrite xdt:Transform="InsertIfMissing">
+      <rules xdt:Transform="InsertIfMissing">
+        <rule name="Http Redirect to HTTPS" enabled="true" stopProcessing="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)">
+          <match url="(.*)" ignoreCase="true" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{HTTPS}" pattern="off" />
+            <add input="{HTTP_HOST}" pattern="insurco.baslijten.com" />
+          </conditions>
+          <action type="Redirect" url="https://{HTTP_HOST}/{R:1}" appendQueryString="true" redirectType="Permanent" />
+        </rule>
+      </rules>
+      <outboundRules xdt:Transform="InsertIfMissing">
+        <rule name="Add Strict-Transport-Security when HTTPS" enabled="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)">
+          <match serverVariable="RESPONSE_Strict_Transport_Security" pattern=".*" />
+          <conditions>
+            <add input="{HTTPS}" pattern="on" />
+            <add input="{HTTP_HOST}" pattern="insurco.baslijten.com" />
+          </conditions>
+          <action type="Rewrite" value="max-age=31536000" />
+        </rule>
+        <rule name="RESPONSE_SERVER" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)">
+          <match serverVariable="RESPONSE_SERVER" pattern=".*" />
+          <action type="Rewrite" value="" />
+        </rule>
+      </outboundRules>
+    </rewrite>
+    <httpProtocol xdt:Transform="InsertIfMissing">
+      <customHeaders xdt:Transform="InsertIfMissing">
+        <remove name="X-Powered-By" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)"/>
+        <Add name="X-Content-Type-Options" Value="nosniff" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)"/>
+      </customHeaders>
+    </httpProtocol>
+    <security>
+      <requestFiltering removeServerHeader="true" xdt:Transform="InsertIfMissing" />
+      <requestFiltering removeServerHeader="true" xdt:Transform="SetAttributes(removeServerHeader)" />
+    </security>
+  </system.webServer>
+
+</configuration>

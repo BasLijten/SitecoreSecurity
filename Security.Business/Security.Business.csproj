@@ -92,6 +92,7 @@
     <Compile Include="Models\ContentSecurityPolicySources\ManifestContentSecurityPolicySource.cs" />
     <Compile Include="Models\ContentSecurityPolicySources\FormActionContentSecurityPolicySource.cs" />
     <Compile Include="Models\ContentSecurityPolicySources\FrameContentSecurityPolicySource.cs" />
+    <Compile Include="Models\ContentSecurityPolicySources\ReflectiveXssContentSecurityPolicySource.cs" />
     <Compile Include="Models\IContentSecurityPolicyReferrer.cs" />
     <Compile Include="Models\ContentSecurityPolicySources\ImageContentSecurityPolicySource.cs" />
     <Compile Include="Models\ContentSecurityPolicySources\MediaContentSecurityPolicySource.cs" />

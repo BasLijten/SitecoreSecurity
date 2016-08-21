@@ -19,6 +19,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unicorn.Web", "Unicorn.Web\Unicorn.Web.csproj", "{996798F0-5CCD-4B8F-B310-94B95209D12D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XDT", "XDT", "{523A8979-2395-451D-9E02-A26DD7CD117B}"
+	ProjectSection(SolutionItems) = preProject
+		configurehttpheaders.xdt = configurehttpheaders.xdt
+		configurehttpheadersIIS10.xdt = configurehttpheadersIIS10.xdt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LetsEncrypt", "LetsEncrypt", "{AEA40CD2-1C9B-486A-B31F-F09F3074292A}"
 	ProjectSection(SolutionItems) = preProject
