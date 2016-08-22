@@ -191,27 +191,31 @@ namespace Security.Business.Pipelines.HttpRequestBegin
 
         private IContentSecurityPolicyReflectedXss GetReflectedXssOptions(Item i)
         {
-            string fieldName = CspFieldIds.ReflextedXssSourceFieldId;
-            IContentSecurityPolicyReflectedXss reflectedXss = new ReflectiveXssContentSecurityPolicySource();            
-            var optionsField = i.Fields[fieldName];
-            var listField = (MultilistField)optionsField;
-            var options = listField.GetItems();
-
-            foreach (var option in options)
+            IContentSecurityPolicyReflectedXss reflectedXss = null; 
+            if (i != null)
             {
-                switch (option.Name.ToLower())
+                string fieldName = CspFieldIds.ReflextedXssSourceFieldId;
+                reflectedXss = new ReflectiveXssContentSecurityPolicySource();
+                var optionsField = i.Fields[fieldName];
+                var listField = (MultilistField)optionsField;
+                var options = listField.GetItems();
+
+                foreach (var option in options)
                 {
-                    case "allow":
-                        reflectedXss.Mode = "allow";
-                        break;
-                    case "filter":
-                        reflectedXss.Mode = "filter";
-                        break;
-                    case "block":
-                        reflectedXss.Mode = "block";
-                        break;
-                    default:
-                        break;
+                    switch (option.Name.ToLower())
+                    {
+                        case "allow":
+                            reflectedXss.Mode = "allow";
+                            break;
+                        case "filter":
+                            reflectedXss.Mode = "filter";
+                            break;
+                        case "block":
+                            reflectedXss.Mode = "block";
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
            

@@ -43,12 +43,20 @@ namespace Security.Business
         private string GenerateSourcePolicy(IContentSecurityPolicySource csp)
         {
             string source = String.Empty;
-            if (csp != null && (csp.Options != null || !string.IsNullOrEmpty(csp.Hostnames)))
+            if (csp != null)
             {
-                source += String.Concat(csp.Name, " "); 
+                var policyOptions = GeneratePolicyOptions(csp.Options);
+                if (String.IsNullOrEmpty(policyOptions.Trim()) && String.IsNullOrEmpty(csp.Hostnames.Trim()))
+                    return source;
+
+                source += String.Concat(csp.Name, " ");                 
                 source += GeneratePolicyOptions(csp.Options);
-                if(!csp.Options.None)
+
+                if (!csp.Options.None)
                     source += csp.Hostnames;
+                
+                if (String.IsNullOrEmpty(source))
+                    return String.Empty;
                 source += ";";
             }
             return source;
@@ -69,12 +77,24 @@ namespace Security.Business
             policy += GenerateSourcePolicy(this._policy.FrameAncestors);
             policy += GenerateSourcePolicy(this._policy.FormAction);
             policy += GenerateSourcePolicy(this._policy.Manifest);
+            policy += GenerateReflectiveXssPolicy(this._policy.ReflectedXss);
             policy += GenerateUpgradeInsecureRequests(this._policy.UpgradeInsecureRequests);
             policy += GenerateBlockAllMixedContent(_policy.BlockAllMixedContent);
             policy += GenerateBaseUri(_policy.BaseUri);
             policy += GeneratePluginTypes(_policy.PluginTypes);
             policy += GenerateReportUri(_policy.ReportUri);
             return policy;
+        }
+
+        private string GenerateReflectiveXssPolicy(IContentSecurityPolicyReflectedXss csp)
+        {
+            string source = String.Empty;
+            if (csp != null)
+            {
+                if (!String.IsNullOrEmpty(csp.Mode))
+                    source = csp.Name + " " + csp.Mode + ";";                
+            }
+            return source;
         }
 
         string GenerateReportUri(string reportUri) => GenerateString("report-uri {0};", reportUri);
