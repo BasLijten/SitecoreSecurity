@@ -79,6 +79,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Zetetic.Security, Version=1.1.0.0, Culture=neutral, PublicKeyToken=86474ebf447b9da7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zetetic.Security.1.1.0.0\lib\Zetetic.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\CspFieldIds.cs" />
@@ -107,6 +111,7 @@
     <Compile Include="Models\IContentSecurityPolicyTemplate.cs" />
     <Compile Include="Models\IContentSecurityPolicySource.cs" />
     <Compile Include="Pipelines\HttpRequestBegin\CreateCspHttpHeader.cs" />
+    <Compile Include="Pipelines\Initialize\AddCryptoAlgorithm.cs" />
     <Compile Include="Pipelines\Initialize\DisableMvcHeader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

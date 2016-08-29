@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unicorn.Web", "Unicorn.Web\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XDT", "XDT", "{523A8979-2395-451D-9E02-A26DD7CD117B}"
 	ProjectSection(SolutionItems) = preProject
+		ChangePasswordGeneration.xdt = ChangePasswordGeneration.xdt
+		ChangePasswordHash.xdt = ChangePasswordHash.xdt
 		configurehttpheaders.xdt = configurehttpheaders.xdt
 		configurehttpheadersIIS10.xdt = configurehttpheadersIIS10.xdt
 		securecookies.xdt = securecookies.xdt
