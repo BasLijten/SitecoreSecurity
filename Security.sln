@@ -46,6 +46,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{77E9683D-445
 		LetsEncrypt\x86\ssleay32.dll = LetsEncrypt\x86\ssleay32.dll
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResetPassword", "ResetPassword\ResetPassword.csproj", "{BA8BB3FF-2547-4F04-A4D6-42A5EFBA7A6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{996798F0-5CCD-4B8F-B310-94B95209D12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{996798F0-5CCD-4B8F-B310-94B95209D12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{996798F0-5CCD-4B8F-B310-94B95209D12D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA8BB3FF-2547-4F04-A4D6-42A5EFBA7A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA8BB3FF-2547-4F04-A4D6-42A5EFBA7A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA8BB3FF-2547-4F04-A4D6-42A5EFBA7A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA8BB3FF-2547-4F04-A4D6-42A5EFBA7A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
