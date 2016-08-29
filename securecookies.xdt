@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.web>    
+      <httpCookies requireSSL="true" xdt:Transform="InsertIfMissing" />
+      <httpCookies requireSSL="true" xdt:Transform="SetAttributes(requireSSL)" />
+      <authentication mode="None">
+        <forms name=".ASPXAUTH" cookieless="UseCookies" requireSSL="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)"/>
+        <forms name=".ASPXAUTH" cookieless="UseCookies" requireSSL="true" xdt:Transform="SetAttributes(requireSSL)" />
+      </authentication>
+  </system.web>
+ </configuration>

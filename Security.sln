@@ -22,6 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XDT", "XDT", "{523A8979-239
 	ProjectSection(SolutionItems) = preProject
 		configurehttpheaders.xdt = configurehttpheaders.xdt
 		configurehttpheadersIIS10.xdt = configurehttpheadersIIS10.xdt
+		securecookies.xdt = securecookies.xdt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LetsEncrypt", "LetsEncrypt", "{AEA40CD2-1C9B-486A-B31F-F09F3074292A}"
