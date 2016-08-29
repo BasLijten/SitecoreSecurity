@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="Constants\CspFieldIds.cs" />
     <Compile Include="ContentSecurityPolicyCreater.cs" />
+    <Compile Include="Extensions\SessionExtensions.cs" />
     <Compile Include="Models\ContentSecurityPolicySources\ContentSecurityPolicy.cs" />
     <Compile Include="Models\ContentSecurityPolicyOptions.cs" />
     <Compile Include="Models\ContentSecurityPolicySource.cs" />
